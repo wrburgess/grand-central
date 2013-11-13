@@ -2,12 +2,15 @@ body {
 
 }
 
-header {
+h1, h2, h3, h4 {
 
 }
 
-h1, h2, h3, h4 {
+header {
 
+  h1 {
+    text-align: center;
+  }
 }
 
 .main {
@@ -16,4 +19,11 @@ h1, h2, h3, h4 {
 
 footer {
 
+  ul {
+
+    li {
+      display: inline;
+      list-style: none;
+    }
+  }
 }
