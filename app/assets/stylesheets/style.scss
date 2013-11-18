@@ -2,6 +2,11 @@ body {
 
 }
 
+.wrapper {
+  margin: 0 auto;
+  width: 768px;
+}
+
 h1, h2, h3, h4 {
 
 }
@@ -15,9 +20,13 @@ header {
 
 .main {
 
+  .zone {
+    height: 100px;
+  }
 }
 
 footer {
+  margin: 0 auto;
 
   ul {
 

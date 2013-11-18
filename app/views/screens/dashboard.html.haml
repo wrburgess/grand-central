@@ -1,10 +1,45 @@
-.zone-1
-  Zone One
-.zone-2
-  Zone Two
-.zone-3
-  Zone Three
-.zone-4
-  Zone Four
-.zone-5
-  Zone Five
+= @buses
+
+.container
+  .row
+    .zone.zone-1
+      .col-xs-1
+        = image_tag "bus.png", alt: "Buses"
+      .col-xs-2.col-xs-offset-0-6
+        .row
+          \#50 DAMEN
+        .row
+          AT Ainsle
+        .row
+          TO 35th/Archer
+      - @bus_times.each do |bus_time|
+        .col-xs-1
+          .bus-time
+            #{bus_time}
+  .row
+    .zone.zone-2
+      .col-xs-1
+        = image_tag "bus.png", alt: "Buses"
+      .col-xs-11
+        Zone Two
+  .row
+    .zone.zone-3
+      .col-xs-1
+        = image_tag "train.png", alt: "Trains"
+      .col-xs-11
+        Zone Three
+  .row
+    .zone.zone-4
+      .col-xs-1
+        = image_tag "bicycle.png", alt: "Bicycles"
+      .col-xs-11
+        #{@bicycle_counts}
+  .row
+    .zone.zone-5
+      .col-xs-2
+        12:35pm
+      .col-xs-4
+        Weather
+      .col-xs-4
+
+      .col-xs-4
