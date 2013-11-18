@@ -5,12 +5,10 @@ class DivvyBicycle
   end
 
   def get_counts
-    doc = JSON.parse(Nokogiri::HTML(open(@request_url)))
-    list = doc["stationBeanList"]
-
-    @counts = list.map do |station|
-      station["availableBikes"] if station["id"] == 344
-    end
+    doc = ActiveSupport::JSON.decode(Nokogiri::HTML(open(@request_url)))
+    stations = doc["stationBeanList"]
+    selected = stations.select { |station| station if station["id"] == 351 }
+    selected.map { |station| station["availableBikes"] }
   end
 
 end

@@ -12,7 +12,7 @@
           AT Ainsle
         .row
           TO 35th/Archer
-      - @bus_times.each do |bus_time|
+      - @bus_times2.each do |bus_time|
         .col-xs-1
           .bus-time
             #{bus_time}
@@ -20,8 +20,17 @@
     .zone.zone-2
       .col-xs-1
         = image_tag "bus.png", alt: "Buses"
-      .col-xs-11
-        Zone Two
+      .col-xs-2.col-xs-offset-0-6
+        .row
+          \#50 LAWRENCE
+        .row
+          AT Wolcott
+        .row
+          TO Jefferson Park
+      - @bus_times2.each do |bus_time|
+        .col-xs-1
+          .bus-time
+            #{bus_time}
   .row
     .zone.zone-3
       .col-xs-1
@@ -32,8 +41,11 @@
     .zone.zone-4
       .col-xs-1
         = image_tag "bicycle.png", alt: "Bicycles"
-      .col-xs-11
-        #{@bicycle_counts}
+      - @bicycle_counts.each do |bicycles|
+        .col-xs-1
+          Wolcott / Lawrence
+        .col-xs-1
+          #{bicycles} Bikes Available
   .row
     .zone.zone-5
       .col-xs-2
