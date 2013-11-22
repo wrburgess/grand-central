@@ -2,7 +2,7 @@
 
 .container
   .row
-    .zone.zone-1
+    .zone
       .col-xs-1
         = image_tag "bus.png", alt: "Buses"
       .col-xs-2.col-xs-offset-0-6
@@ -12,17 +12,17 @@
           AT Ainsle
         .row
           TO 35th/Archer
-      - @bus_times2.each do |bus_time|
+      - @bus_times1.each do |bus_time|
         .col-xs-1
           .bus-time
             #{bus_time}
   .row
-    .zone.zone-2
+    .zone
       .col-xs-1
         = image_tag "bus.png", alt: "Buses"
       .col-xs-2.col-xs-offset-0-6
         .row
-          \#50 LAWRENCE
+          \#73 LAWRENCE
         .row
           AT Wolcott
         .row
@@ -32,26 +32,72 @@
           .bus-time
             #{bus_time}
   .row
-    .zone.zone-3
+    .zone
+      .col-xs-1
+        = image_tag "bus.png", alt: "Buses"
+      .col-xs-2.col-xs-offset-0-6
+        .row
+          \#73 LAWRENCE
+        .row
+          AT Wolcott
+        .row
+          TO Jefferson Park
+      - @bus_times2.each do |bus_time|
+        .col-xs-1
+          .bus-time
+            #{bus_time}
+  .row
+    .zone
       .col-xs-1
         = image_tag "train.png", alt: "Trains"
-      .col-xs-11
-        Zone Three
+      .col-xs-2.col-xs-offset-0-6
+        .row
+          BROWN LINE
+        .row
+          AT Damen
+        .row
+          TO Loop
+      - @train_times1.each do |train_time|
+        .col-xs-1
+          .train-time
+            #{train_time}
   .row
-    .zone.zone-4
+    .zone
       .col-xs-1
         = image_tag "bicycle.png", alt: "Bicycles"
-      - @bicycle_counts.each do |bicycles|
-        .col-xs-1
-          Wolcott / Lawrence
-        .col-xs-1
-          #{bicycles} Bikes Available
-  .row
-    .zone.zone-5
       .col-xs-2
-        12:35pm
+        Wolcott / Lawrence
       .col-xs-4
-        Weather
-      .col-xs-4
-
-      .col-xs-4
+        .row
+          #{@divvy_bicycle.available_bikes} Bikes Available
+        .row
+          #{@divvy_bicycle.open_docks} Open Docks
+  .row
+    .zone
+      .col-xs-2
+        .row
+          = @weather.current_date
+        .row
+          = @weather.current_time
+        .row
+          = @weather.current_temp
+      .col-xs-1
+        .row
+          HIGH
+        .row
+          = @weather.high_temp
+      .col-xs-1
+        .row
+          LOW
+        .row
+          = @weather.low_temp
+      .col-xs-1
+        .row
+          RAIN
+        .row
+          = @weather.chance_of_rain
+      .col-xs-1
+        .row
+          WIND
+        .row
+          = @weather.wind

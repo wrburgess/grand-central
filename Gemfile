@@ -9,6 +9,7 @@ gem "json", "1.8.1"
 gem "pg", "0.17.0"
 gem "sass-rails", "4.0.1"
 gem "settingslogic", "2.0.9"
+gem "time_diff", "0.3.0"
 gem "uglifier", "2.3.1"
 gem "unicorn", "4.7.0"
 
